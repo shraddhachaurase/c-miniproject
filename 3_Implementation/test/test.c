@@ -13,7 +13,7 @@ void tearDown(){}
 
 void openAboutme(void)
 {
-  TEST_ASSERT_EQUAL(SUCCESS , Aboutme());
+  TEST_ASSERT_EQUAL(SUCCESS , About_me());
 }
 
 
