@@ -58,7 +58,7 @@ int main()
 			case 2:scorecard();break;
 			case 3:sett();main();
 			case 4:help();break;
-			case 5:Aboutme();break;
+			case 5:About_me();break;
 			case 0:system("cls");gotoxy(17,10);printf("#This Game is created by Shivani#");delay(1000);exit(1);
 			default:main();
 		}

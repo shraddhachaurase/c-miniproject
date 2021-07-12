@@ -8,7 +8,12 @@
  * @param pos 
  * @param name 
  */
-void getscore(int score,int speed,int level,int pos,char name)
+
+int x=1;//used for x cursor co-ordinate
+#define pos gotoxy(33,x++) /*for cursor movement*/
+#define ln  printf(".......................");
+char name;
+void getscore(int score,int speed,int level)
 {
 	FILE *fp;
 	fp=fopen("file.txt","a");

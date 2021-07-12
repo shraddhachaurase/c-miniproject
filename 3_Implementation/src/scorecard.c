@@ -17,5 +17,5 @@ void scorecard()
 	{	printf("%c",ch);
 	}
 	getch();
-	main();
+	
 }

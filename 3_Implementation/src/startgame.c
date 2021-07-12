@@ -34,7 +34,7 @@ void startgame()
 	pos;
 	scanf("%d",&level);
 	if(level==4)
-	main();
+	 return main();
 
 	else
 

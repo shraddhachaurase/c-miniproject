@@ -16,5 +16,5 @@ void help()
 	printf("->select the level and get started");gotoxy(7,9);
 	printf("->Characters are displayed and you have to type them as fast as you can.");gotoxy(7,10);
 	printf("->Avoid incorrect typing otherwise game will be over.");
-	getch();main();
+	getch();
 }
