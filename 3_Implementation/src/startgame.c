@@ -3,7 +3,7 @@
  * @brief 
  * 
  */
-void startgame()
+int startgame()
 {       int score=0,level=1,mode=100,count=0;
 	clock_t begin;int time_spent,speed;
 
@@ -11,6 +11,7 @@ void startgame()
 	int x=1;//used for x cursor co-ordinate
     #define pos gotoxy(33,x++) /*for cursor movement*/
 	#define ln  printf(".......................");
+	#define main();
 	int t=30;
     int c=0;
     rectangle(0,0,70,15);
@@ -34,7 +35,7 @@ void startgame()
 	pos;
 	scanf("%d",&level);
 	if(level==4)
-	 return main();
+	 main()
 
 	else
 
@@ -127,10 +128,10 @@ void startgame()
 		switch(ch)
 		{
 		      case 1:startgame();break;//recursive call
-		      case 2:main();break;
+		      case 2:printf("hello");break;
 		      case 3:system("cls");gotoxy(17,10);printf("This Game is created by Shivani Yadawar#");delay(1000);exit(1);
 		      default:pos;printf("wrong choice!");pos;
-				main();
+				
 		}
 
 	}

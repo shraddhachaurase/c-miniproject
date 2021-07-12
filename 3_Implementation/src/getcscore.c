@@ -9,8 +9,8 @@
  * @param name 
  */
 
-int x=1;//used for x cursor co-ordinate
-#define pos gotoxy(33,x++) /*for cursor movement*/
+
+#define pos gotoxy(33,1) /*for cursor movement*/
 #define ln  printf(".......................");
 char name;
 void getscore(int score,int speed,int level)
