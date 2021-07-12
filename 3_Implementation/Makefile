@@ -14,7 +14,7 @@ src/startgame.c\
 
 # All test source files
 TEST_SRC = test/test.c\
-unity/unity.c
+	unity/unity.c
 
 
 COV_SRC = test.c
@@ -35,20 +35,15 @@ else
 endif
 .PHONY: run clean test doc all
 
-all:
-	gcc -I $(INC_H) $(SRC) main.c.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
+all: gcc -I $(INC_H) $(SRC) main.c.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 	
-run:
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+run: ./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
-test:
-	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
+test: gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
 	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 
-coverage:
-	
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
+coverage: gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
 	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(COV_SRC)
 #	$(RM) *.$(EXEC)
