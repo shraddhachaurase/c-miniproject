@@ -13,7 +13,6 @@
 
 #include<time.h>
 #include<stdio.h>
-#include<windows.h>
 #include<dos.h>
 #include<stdlib.h>
 
