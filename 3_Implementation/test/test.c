@@ -11,9 +11,9 @@ void setUp(){}
 void tearDown(){}
 
 
-void openAboutme(void)
+void openAbout_me(void)
 {
-  TEST_ASSERT_EQUAL(SUCCESS , About_me());
+  TEST_ASSERT_EQUAL_CHAR_ARRAY_MESSAGE(SUCCESS , About_me());
 }
 
 
@@ -24,7 +24,7 @@ int main(void)
     UNITY_BEGIN();
 
     /* Run Test functions */
-    RUN_TEST(openAboutme);
+    RUN_TEST(openAbout_me);
     
     /* Close the Unity Test Framework */
     return UNITY_END();

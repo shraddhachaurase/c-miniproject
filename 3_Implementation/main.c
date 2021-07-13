@@ -44,11 +44,11 @@ int main()
 		pos;
 		printf("3.Set the time limit::");
 		pos;
-		printf("4.Help");
+		printf("4.Help\n");
 		pos;
-		printf("5.About me");
+		printf("5.About me\n");
 		pos;
-		printf("0.exit");
+		printf("0.exit\n");
 		pos;
 		printf("Enter your choice::");
 		scanf("%d",&ch);

@@ -3,23 +3,20 @@
  * @brief 
  * 
  */
-int startgame()
-{       int score=0,level=1,mode=100,count=0;
+
+#define pos gotoxy(33,y++) /*for cursor movement*/
+#define ln  printf(".......................");
+void startgame()
+{       int y,t,score=0,level=1,mode=100,count=0;
 	clock_t begin;int time_spent,speed;
 
 	int r,letter,ch;
-	int x=1;//used for x cursor co-ordinate
-    #define pos gotoxy(33,x++) /*for cursor movement*/
-	#define ln  printf(".......................");
-	#define main();
-	int t=30;
-    int c=0;
-    rectangle(0,0,70,15);
+rectangle(0,0,70,15);
 	delay(500);
 
 	system("cls");
 	srand(time(NULL)) ; //initilizes random function and seed with time
-	x=2;
+	y=2;
 	pos;
 	setcolor(12);
 	printf("#select the Mode#");pos;
@@ -35,13 +32,13 @@ int startgame()
 	pos;
 	scanf("%d",&level);
 	if(level==4)
-	 main()
+	main();
 
 	else
 
-	{     if(level==1)    //boundary addition for lowercase alphabet
-	       mode=65;
-	     if(level==2)    //boundary addition for uppercase
+	{     if(level==1)    //boundary addition for uppercase alphabet
+	      mode=65;
+	     if(level==2)    //boundary addition for lowercase
 		mode=97;
 	     if(level==3)    //condition for mixed case
 		mode=120;
@@ -80,12 +77,12 @@ int startgame()
 
 			} //end of else
 		}//end of while
-		gotoxy(26,x);
+		gotoxy(26,5);
 
 		delay(400);
 
 		setcolor(5); //blue text color
-		++x;
+		++y;
 		pos;
 		speed=(count*60)/time_spent ;
 	       //	symbol=2;
@@ -116,7 +113,7 @@ int startgame()
 		printf("Your net speed=%d letter per minute",speed);
 
 		getscore(score,speed,level);//saves data to file
-		++x;
+		++y;
 		pos;
 		printf("1.play again");
 		pos;
@@ -128,12 +125,13 @@ int startgame()
 		switch(ch)
 		{
 		      case 1:startgame();break;//recursive call
-		      case 2:printf("hello");break;
+		      case 2:main();break;
 		      case 3:system("cls");gotoxy(17,10);printf("This Game is created by Shivani Yadawar#");delay(1000);exit(1);
 		      default:pos;printf("wrong choice!");pos;
-				
+				main();
 		}
 
 	}
 
 }
+//......................end of start game function..........................

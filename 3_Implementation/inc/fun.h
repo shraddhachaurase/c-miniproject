@@ -25,7 +25,7 @@ void getscore(int,int,int);
 void About_me();
 void help();
 void sett();
-int startgame();
+void startgame();
 void rectangle(int x,int y,int l,int b);
 void setcolor(int ForgC);
 void delay(unsigned int mseconds);
