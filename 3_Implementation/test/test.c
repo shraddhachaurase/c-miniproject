@@ -15,8 +15,14 @@ void openAbout_me(void)
 {
   TEST_ASSERT_EQUAL_CHAR_ARRAY_MESSAGE(SUCCESS , About_me());
 }
-
-
+void openhelp(void)
+{
+  TEST_ASSERT_EQUAL_CHAR_ARRAY_MESSAGE(SUCCESS , help());
+}
+void getscore(char,int,int,int)
+{
+  TEST_ASSERT_EQUAL_CHAR_ARRAY_MESSAGE(SUCCESS , getscore(shivani,10,10,5));
+}
 
 int main(void)
 {
@@ -25,7 +31,8 @@ int main(void)
 
     /* Run Test functions */
     RUN_TEST(openAbout_me);
-    
-    /* Close the Unity Test Framework */
+    RUN_TEST(openhelp);
+    RUN_TEST(getscore);
+   /* Close the Unity Test Framework */
     return UNITY_END();
 }
