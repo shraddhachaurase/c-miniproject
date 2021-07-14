@@ -5,7 +5,10 @@
 #include<windows.h>
 #include<dos.h>
 #include<stdlib.h>
-
+/**
+ * @brief 
+ * 
+ */
 int x=1;//used for x cursor co-ordinate
 #define pos gotoxy(33,x++) /*for cursor movement*/
 #define ln  printf(".......................");

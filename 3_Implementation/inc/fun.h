@@ -2,10 +2,10 @@
 #define __FUN_H
 /**
  * @file fun.h
- * @author shivani (you@domain.com)
+ * @author shivaniyadawar (yadawarshivani@gmail.com)
  * @brief 
  * @version 0.1
- * @date 2021-07-11
+ * @date 2021-07-14
  * 
  * @copyright Copyright (c) 2021
  * 
